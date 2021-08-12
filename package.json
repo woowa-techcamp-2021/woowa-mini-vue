@@ -1,8 +1,8 @@
 {
-  "name": "woowa-vue",
+  "name": "woowa-mini-vue",
   "version": "0.1.0",
-  "description": "mini vue.js",
-  "main": "index.js",
+  "description": "woowa mini vue.js",
+  "main": "./src/vue.ts",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --watch",
     "build": "cross-env NODE_ENV=production webpack"
@@ -11,7 +11,11 @@
     "mini vue",
     "woowa vue"
   ],
-  "author": "Taegyun Kim",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woowa-techcamp-2021/woowa-mini-vue"
+  },
+  "author": "Taegyun Sooran Kim",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.0",
