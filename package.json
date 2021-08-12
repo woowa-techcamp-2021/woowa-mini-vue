@@ -1,0 +1,32 @@
+{
+  "name": "woowa-vue",
+  "version": "0.1.0",
+  "description": "mini vue.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "keywords": [
+    "mini vue",
+    "woowa vue"
+  ],
+  "author": "Taegyun Kim",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/lodash.clonedeep": "^4.5.6",
+    "@types/lodash.isequal": "^4.5.5",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.2.0",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isequal": "^4.5.0"
+  }
+}

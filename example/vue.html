@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woowa Mini Vue.js Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+        padding: 10px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        border-bottom: 1px solid grey;
+      }
+
+      section {
+        margin-bottom: 15px;
+        padding: 5px;
+        border: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>우아한 미니 Vue.js 예제</h1>
+
+    <div id="app">
+      <section>
+        <h2>숫자 조종</h2>
+        <input type="range" v-model="number" />
+        <input type="number" v-model="number" />
+      </section>
+
+      <section>
+        <h2>v-model 메세지 바인딩</h2>
+
+        <h3>입력</h3>
+        <div>
+          메세지: <input type="text" v-model="message" />
+          <button type="button" v-on:click="inputReset">리셋</button>
+        </div>
+
+        <h3>단순 출력</h3>
+        <p>{{ message }}</p>
+
+        <h3>html 출력</h3>
+        <div v-html="message"></div>
+      </section>
+
+      <section>
+        <h2>v-show</h2>
+        <input type="checkbox" v-model="visible" />
+        <span v-show="visible">보인다!</span>
+      </section>
+
+      <section>
+        count: {{ count }}
+        <button type="button" v-on:click="handleUpClick">UP!</button>
+        <button type="button" v-on:click="handleDownClick">DOWN!</button>
+      </section>
+    </div>
+
+    <script src="../dist/woowa-vue.js"></script>
+    <script>
+      const vue = new WoowaVue({
+        el: '#app',
+        data: {
+          number: 0,
+          message: '안녕하세요.',
+          count: 1,
+          visible: true,
+        },
+        methods: {
+          inputReset() {
+            this.message = '안녕하세요.';
+          },
+          handleUpClick() {
+            this.count += 1;
+          },
+          handleDownClick() {
+            this.count -= 1;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

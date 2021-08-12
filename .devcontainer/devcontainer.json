@@ -1,0 +1,14 @@
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": { "VARIANT": "14" }
+  },
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "extensions": ["esbenp.prettier-vscode", "editorconfig.editorconfig"],
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}
