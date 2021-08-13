@@ -6,6 +6,8 @@
 
 ## Observable
 
+[데모](https://woowa-techcamp-2021.github.io/woowa-mini-vue/observable.html) 보러가기
+
 기본적으로 pubsub 패턴 구조를 가지고 있습니다.<br />
 그러나 subscribe와 update를 일일히 실행해 줄 필요는 없습니다.<br />
 `ovservify()`를 통해서 원하는 객체를 `observable`하게 만들면 객체의 속성이 바뀌면 외부로 알림을 줄 수 있게 됩니다.<br />
@@ -45,6 +47,8 @@ o.person.age = 30;
 ```
 
 ## mini vue.js
+
+[데모](https://woowa-techcamp-2021.github.io/woowa-mini-vue) 보러가기
 
 ### 구현된 기능
 
