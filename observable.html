@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Observable Example</title>
+    <style>
+      p {
+        border-bottom: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const _log = console.log;
+      console.log = (...args) => {
+        _log(...args);
+        const p = document.createElement('p');
+        p.textContent = args.map((x) => x.toString()).join(', ');
+        document.body.appendChild(p);
+      };
+    </script>
+    <script src="./observable.js"></script>
+    <script>
+      const o = {
+        a: 10,
+        b: 20,
+        person: {
+          name: 'kim',
+          age: 28,
+        },
+      };
+
+      observify(o);
+      watch(
+        () => o.a + o.b,
+        (newValue, oldVaue) => {
+          console.log(`o.a + o.b = ${oldVaue} -> ${newValue}`);
+        },
+      );
+      watch(
+        () => `name: ${o.person.name}, age: ${o.person.age}`,
+        (newValue, oldValue) => {
+          console.log(`${oldValue} -> ${newValue}`);
+        },
+      );
+
+      console.log('o.a = 20;');
+      o.a = 20;
+
+      console.log('o.b = 30;');
+      o.b = 30;
+
+      console.log("o.person.name = 'lee';");
+      o.person.name = 'lee';
+
+      console.log('o.person.age = 30;');
+      o.person.age = 30;
+    </script>
+  </body>
+</html>
