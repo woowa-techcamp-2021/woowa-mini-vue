@@ -2,6 +2,8 @@
 
 우아한 mini-vue.js 입니다.
 
+[여기](https://drive.google.com/file/d/12kmHrAlzGFgrTFAVgodhjVt9aX4H1fxk/view?usp=sharing)서 발표자료를 보실 수 있습니다.
+
 ## Observable
 
 기본적으로 pubsub 패턴 구조를 가지고 있습니다.<br />
