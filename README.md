@@ -51,10 +51,10 @@ o.person.age = 30;
 - `v-show`를 통해서 data와 `display: none`을 제어
 - `v-html`을 통해서 data와 `element.innerHTML`에 연결
 
-### 아쉽게 미구연 ㅠㅠ
+### 아쉽게 미구현 ㅠㅠ
 
 - component
-- `v-for`를 통한 배열 랜더
+- `v-for`를 통한 배열 렌더
 
 ### 예시
 
